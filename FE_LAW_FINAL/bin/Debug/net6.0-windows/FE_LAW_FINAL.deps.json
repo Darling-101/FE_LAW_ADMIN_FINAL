@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "FE_LAW_FINAL/1.0.0": {
+        "runtime": {
+          "FE_LAW_FINAL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FE_LAW_FINAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
