@@ -1,0 +1,29 @@
+﻿<Window x:Class="FE_LAW_FINAL.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FE_LAW_FINAL"
+        mc:Ignorable="d"
+        DataContext="{StaticResource LoginVM}"
+        Title="Login Window" Height="530" Width="510"
+        ResizeMode="NoResize"
+        Closing="DataWindow_Closing"  >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bg_login.jpg"/>
+        </Grid.Background>
+        <Grid  Width="242" Height="332">
+            <TextBox BorderThickness="2" Foreground="DodgerBlue" Background="White" TextWrapping="Wrap"  x:Name="username" Margin="0,117,0,183" VerticalContentAlignment="Center" FontSize="14"/>
+            <TextBox BorderThickness="2" Foreground="DodgerBlue" Background="White" TextWrapping="Wrap"  x:Name="visiblePassword" Margin="0,165,0,135" VerticalContentAlignment="Center" FontSize="14" Visibility="Hidden"/>
+            <PasswordBox BorderThickness="2" HorizontalAlignment="Center" PasswordChar="*" Background="White" Foreground="DodgerBlue" Margin="0,166,0,0" x:Name="password" VerticalAlignment="Top" Width="242" Visibility="Visible" Height="31" VerticalContentAlignment="Center" FontSize="14"/>
+            <CheckBox Cursor="Hand" x:Name="showPassword" Content="Hiển thị mật khẩu" Foreground="White" HorizontalAlignment="Left" Margin="7,214,0,0" VerticalAlignment="Top" Checked="showPassword_Checked"/>
+
+        </Grid>
+        <Label Content="Đăng nhập" Foreground="White" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+        <Label Content="LAW88" Foreground="White" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" Height="64" Width="137" Background="{x:Null}" Focusable="True"/>
+
+        <Button Content="Đăng nhập" Cursor="Hand" HorizontalAlignment="Center" Background="DodgerBlue" Foreground="White" Margin="0,337,0,0" VerticalAlignment="Top" Width="242" Height="44" FontSize="16" FontWeight="Bold" Click="Button_Click" />
+        <Button Content="Đăng Kí" Cursor="Hand" HorizontalAlignment="Center" Background="DodgerBlue" Foreground="White" Margin="0,394,0,0" VerticalAlignment="Top" Width="242" Height="44" FontSize="16" FontWeight="Bold" Click="Button_Click_1"/>
+    </Grid>
+</Window>

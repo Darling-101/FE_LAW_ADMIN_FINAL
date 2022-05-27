@@ -7,7 +7,34 @@
         mc:Ignorable="d"
         DataContext="{StaticResource MainVM}"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,0,5">
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="13,2,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ID"  HorizontalAlignment="Left" Margin="109,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"/>
 
+        <Label Content="Điều:" HorizontalAlignment="Left" Margin="13,35,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="article" HorizontalAlignment="Left" Margin="108,37,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="318" Height="22"/>
+
+        <Label Content="Nội dung điều:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="articleContent" HorizontalAlignment="Left" Margin="109,70,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317" Height="72"/>
+
+        <Label Content="Khoản:" HorizontalAlignment="Left" Margin="13,158,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="clause" HorizontalAlignment="Left" Margin="109,162,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317"/>
+
+        <Label Content="Nội dung khoản:" HorizontalAlignment="Left" Margin="13,199,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="clauseContent" HorizontalAlignment="Left" Margin="109,199,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317" Height="82"/>
+
+        <Label Content="Mức phạt trên:" HorizontalAlignment="Left" Margin="13,289,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fineAbove" HorizontalAlignment="Left" Margin="109,335,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317"/>
+
+        <Label Content="Mức phạt dưới:" HorizontalAlignment="Left" Margin="8,331,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fineBelow" HorizontalAlignment="Left" Margin="109,293,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317"/>
+
+        <Button Content="Add" Width="72" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" Click="Button_Click" />
+        <Button Content="Show" HorizontalAlignment="Left" Margin="295,392,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_3" />
+        <Button Content="Update" HorizontalAlignment="Left" Margin="108,392,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_1" />
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="196,392,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_2" />
+
+        <ListBox x:Name="listBox" Margin="446,0,0,0" Width="auto" >
+        </ListBox>
     </Grid>
 </Window>
