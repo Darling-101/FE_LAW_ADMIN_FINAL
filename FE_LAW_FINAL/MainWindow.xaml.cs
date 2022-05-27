@@ -111,6 +111,9 @@ namespace FE_LAW_FINAL {
             conn.Close();
         }
 
-        
+        void DataMainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

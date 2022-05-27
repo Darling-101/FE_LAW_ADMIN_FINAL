@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:FE_LAW_FINAL"
         mc:Ignorable="d"
         DataContext="{StaticResource MainVM}"
+        Closing="DataMainWindow_Closing"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="0,0,0,5">
         <Label Content="ID:" HorizontalAlignment="Left" Margin="13,2,0,0" VerticalAlignment="Top"/>

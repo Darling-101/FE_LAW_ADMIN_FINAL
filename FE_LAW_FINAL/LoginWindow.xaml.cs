@@ -25,8 +25,12 @@ namespace FE_LAW_FINAL {
         SQLiteDataAdapter adapter = new SQLiteDataAdapter();
         public Boolean isLogined = false;
         public bool isLoaded = false;
+        String _username;
+        String _password;
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public LoginWindow()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
@@ -34,8 +38,8 @@ namespace FE_LAW_FINAL {
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String _username = username.Text;
-            String _password = password.Password.ToString();
+            _username = username.Text;
+            _password = password.Password.ToString();
             
 
             if (_username == "" || _password == "")
@@ -88,21 +92,22 @@ namespace FE_LAW_FINAL {
         }
 
         private void showPassword_Checked(object sender, RoutedEventArgs e)
-        {
-            String _password = password.Password.ToString();
-            visiblePassword.Text = _password;
-            if (showPassword.IsChecked == true)
-            {
+        {       visiblePassword.Text = password.Password;
                 password.Visibility = Visibility.Hidden;
-                visiblePassword.Visibility = Visibility.Visible;
-            }
-            else if (showPassword.IsChecked == false)
-            {
-                password.Visibility = Visibility.Visible;
-                visiblePassword.Visibility = Visibility.Hidden;
-            }
+                visiblePassword.Visibility = Visibility.Visible;            
         }
 
+        private void showPassword_Unchecked(object sender, RoutedEventArgs e)
+        {
+            password.Visibility = Visibility.Visible;
+            visiblePassword.Visibility = Visibility.Hidden;
+        }
+
+        // TextChangedEventHandler delegate method.
+        private void textChangedEventHandler(object sender, TextChangedEventArgs args)
+        {
+            password.Password = visiblePassword.Text;
+        } 
         void DataWindow_Closing(object sender, CancelEventArgs e)
         {
 
