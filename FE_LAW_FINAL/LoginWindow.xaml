@@ -3,6 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns:local="clr-namespace:FE_LAW_FINAL"
         mc:Ignorable="d"
         DataContext="{StaticResource LoginVM}"
@@ -14,15 +22,15 @@
             <ImageBrush ImageSource="/bg_login.jpg"/>
         </Grid.Background>
         <Grid  Width="242" Height="332">
-            <TextBox BorderThickness="2" Foreground="DodgerBlue" Background="White" TextWrapping="Wrap"  x:Name="username" Margin="0,117,0,183" VerticalContentAlignment="Center" FontSize="14"/>
-            <TextBox BorderThickness="2" TextChanged="textChangedEventHandler" Foreground="DodgerBlue" Background="White" TextWrapping="Wrap"  x:Name="visiblePassword"  Margin="0,165,0,135" VerticalContentAlignment="Center" FontSize="14" Visibility="Hidden"/>
-            <PasswordBox BorderThickness="2" HorizontalAlignment="Center" PasswordChar="*" Background="White" Foreground="DodgerBlue" Margin="0,166,0,0" x:Name="password" VerticalAlignment="Top" Width="242" Visibility="Visible" Height="31" VerticalContentAlignment="Center" FontSize="14"/>
-            <CheckBox Cursor="Hand" x:Name="showPassword" Content="Hiển thị mật khẩu" Foreground="White" HorizontalAlignment="Left" Margin="7,214,0,0" VerticalAlignment="Top" Checked="showPassword_Checked" Unchecked="showPassword_Unchecked"/>
+            <TextBox materialDesign:HintAssist.Hint="Tên đăng nhập" BorderThickness="1" Foreground="DodgerBlue" Background="White" TextWrapping="Wrap"  x:Name="username" Margin="0,117,0,183" VerticalContentAlignment="Center" FontSize="14"/>
+            <TextBox materialDesign:HintAssist.Hint="Mật khẩu" BorderThickness="1" TextChanged="textChangedEventHandler" Foreground="DodgerBlue" Background="White" TextWrapping="Wrap"  x:Name="visiblePassword"  Margin="0,165,0,135" VerticalContentAlignment="Center" FontSize="14" Visibility="Hidden"/>
+            <PasswordBox materialDesign:HintAssist.Hint="Mật khẩu" BorderThickness="2" HorizontalAlignment="Center" PasswordChar="*" Background="White" Foreground="DodgerBlue" Margin="0,166,0,0" x:Name="password" VerticalAlignment="Top" Width="242" Visibility="Visible" Height="31" VerticalContentAlignment="Center" FontSize="14"/>
+            <CheckBox Cursor="Hand"  x:Name="showPassword" Content="Hiển thị mật khẩu" Foreground="White" HorizontalAlignment="Left" Margin="7,214,0,0" VerticalAlignment="Top" Checked="showPassword_Checked" Unchecked="showPassword_Unchecked"/>
         </Grid>
         <Label Content="Đăng nhập" Foreground="White" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
         <Label Content="LAW88" Foreground="White" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" Height="64" Width="137" Background="{x:Null}" Focusable="True"/>
 
         <Button Content="Đăng nhập" Cursor="Hand" HorizontalAlignment="Center" Background="DodgerBlue" Foreground="White" Margin="0,337,0,0" VerticalAlignment="Top" Width="242" Height="44" FontSize="16" FontWeight="Bold" Click="Button_Click" />
-        <Button Content="Đăng Kí" Cursor="Hand" HorizontalAlignment="Center" Background="DodgerBlue" Foreground="White" Margin="0,394,0,0" VerticalAlignment="Top" Width="242" Height="44" FontSize="16" FontWeight="Bold" Click="Button_Click_1"/>
+        <!--<Button Content="Đăng Kí" Cursor="Hand" HorizontalAlignment="Center" Background="DodgerBlue" Foreground="White" Margin="0,394,0,0" VerticalAlignment="Top" Width="242" Height="44" FontSize="16" FontWeight="Bold" Click="Button_Click_1"/>-->
     </Grid>
 </Window>

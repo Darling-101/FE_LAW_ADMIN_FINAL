@@ -20,7 +20,7 @@ namespace FE_LAW_FINAL {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-        public const string dbcon = @"Data Source=C:\Users\20010844\source\repos\DataBase\DataBase\testDB.db";
+        public const string dbcon = @"Data Source=C:\Users\20010844\Desktop\law.db";
         SQLiteConnection conn = new SQLiteConnection(dbcon);
         SQLiteCommand cmd = new SQLiteCommand();
         SQLiteDataAdapter adapter = new SQLiteDataAdapter();
@@ -105,7 +105,7 @@ namespace FE_LAW_FINAL {
                 newT.TextWrapping = TextWrapping.WrapWithOverflow;
                 newT.MaxWidth = 1450;
                 newT.MinWidth = 200;
-                newT.Text = String.Format("ID:{0} \nĐiều: {1} \nNội dung điều: {2} \nKhoản: {3} \nNội dung khoản: {4} \nMức phạt trên: {5} \nMức phạt dưới: {6}", reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]);
+                newT.Text = String.Format("ID:{0} \nĐiều: {1} \nNội dung điều:\n {2} \nKhoản: {3} \nNội dung khoản: {4} \nMức phạt trên: {5} \nMức phạt dưới: {6}", reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]);
                 listBox.Items.Add(newT);
             }
             conn.Close();

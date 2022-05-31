@@ -39,3 +39,5 @@ C:\Users\20010844\source\repos\FE_LAW_FINAL\FE_LAW_FINAL\obj\Debug\net6.0-window
 C:\Users\20010844\source\repos\FE_LAW_FINAL\FE_LAW_FINAL\obj\Debug\net6.0-windows\FE_ADMIN_LAW_FINAL.pdb
 C:\Users\20010844\source\repos\FE_LAW_FINAL\FE_LAW_FINAL\obj\Debug\net6.0-windows\FE_ADMIN_LAW_FINAL.genruntimeconfig.cache
 C:\Users\20010844\source\repos\FE_LAW_FINAL\FE_LAW_FINAL\obj\Debug\net6.0-windows\ref\FE_ADMIN_LAW_FINAL.dll
+C:\Users\20010844\source\repos\FE_LAW_FINAL\FE_LAW_FINAL\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+C:\Users\20010844\source\repos\FE_LAW_FINAL\FE_LAW_FINAL\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll

@@ -68,7 +68,6 @@ namespace FE_LAW_FINAL {
 
             if (isLogined)
             {
-                MessageBox.Show("Đăng nhập thành công");
                 this.Hide();
             }
             else
@@ -114,5 +113,9 @@ namespace FE_LAW_FINAL {
             System.Windows.Application.Current.Shutdown();
         }
 
+        private void showPassword_ColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+
+        }
     }
 }

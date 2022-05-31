@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "boyxe0U8ZROvGTFwWqrroHKiYKQk+PElZ/pCyokKG1lKY0RrhgUxmK+bYw3IXCxdAxnjCix/AopRVAJITz05Cg==",
+  "dgSpecHash": "4qSjUnBBEqxTbV/1JCqdsT0vEaIIz6s/0tNBHimUo1cN/MMCA8hj2QxD5RfmGIGJfqUaRzSTq9OUWjRY4CBUeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\20010844\\source\\repos\\FE_LAW_FINAL\\FE_LAW_FINAL\\FE_ADMIN_LAW_FINAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\20010844\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\20010844\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\20010844\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512",
     "C:\\Users\\20010844\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\20010844\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\20010844\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -7,35 +7,52 @@
         mc:Ignorable="d"
         DataContext="{StaticResource MainVM}"
         Closing="DataMainWindow_Closing"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="800">
     <Grid Margin="0,0,0,5">
-        <Label Content="ID:" HorizontalAlignment="Left" Margin="13,2,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="67,18,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="ID"  HorizontalAlignment="Left" Margin="109,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"/>
 
-        <Label Content="Điều:" HorizontalAlignment="Left" Margin="13,35,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="article" HorizontalAlignment="Left" Margin="108,37,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="318" Height="22"/>
+        <Label Content="Điều:" HorizontalAlignment="Left" Margin="62,48,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="article" HorizontalAlignment="Left" Margin="109,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="318" Height="22"/>
 
-        <Label Content="Nội dung điều:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="articleContent" HorizontalAlignment="Left" Margin="109,70,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317" Height="72"/>
+        <Label Content="Nội dung điều:" HorizontalAlignment="Left" Margin="17,104,0,0" VerticalAlignment="Top"/>
+        <TextBox
+            TextWrapping="Wrap"
+            MinWidth="280"
+            AcceptsReturn="True"
+            VerticalScrollBarVisibility="Auto"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="109,104,0,0" x:Name="articleContent"
+            Width="330" Height="183"/>
 
-        <Label Content="Khoản:" HorizontalAlignment="Left" Margin="13,158,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="clause" HorizontalAlignment="Left" Margin="109,162,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317"/>
 
-        <Label Content="Nội dung khoản:" HorizontalAlignment="Left" Margin="13,199,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="clauseContent" HorizontalAlignment="Left" Margin="109,199,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317" Height="82"/>
+        <Label Content="Khoản:" HorizontalAlignment="Left" Margin="46,315,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="clause" HorizontalAlignment="Left" Margin="110,314,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317"/>
 
-        <Label Content="Mức phạt trên:" HorizontalAlignment="Left" Margin="13,289,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="fineAbove" HorizontalAlignment="Left" Margin="109,335,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317"/>
+        <Label Content="Nội dung khoản:" HorizontalAlignment="Left" Margin="-4,358,0,0" VerticalAlignment="Top"/>
+        <TextBox
+            TextWrapping="Wrap"
+            AcceptsReturn="True"
+            VerticalScrollBarVisibility="Auto"
+            Margin="99,358,0,0" x:Name="clauseContent" 
+            Width="330"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" Height="183"/>
 
-        <Label Content="Mức phạt dưới:" HorizontalAlignment="Left" Margin="8,331,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="fineBelow" HorizontalAlignment="Left" Margin="109,293,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="317"/>
+        <Label Content="Mức phạt trên:" HorizontalAlignment="Left" Margin="3,559,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fineAbove" HorizontalAlignment="Left" Margin="99,621,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="318"/>
 
-        <Button Content="Add" Width="72" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" Click="Button_Click" />
-        <Button Content="Show" HorizontalAlignment="Left" Margin="295,392,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_3" />
-        <Button Content="Update" HorizontalAlignment="Left" Margin="108,392,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_1" />
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="196,392,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_2" />
+        <Label Content="Mức phạt dưới:" HorizontalAlignment="Left" Margin="-4,622,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fineBelow" HorizontalAlignment="Left" Margin="99,563,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="318"/>
+
+        <Button Content="Add" Width="72" HorizontalAlignment="Left" Margin="8,702,0,0" VerticalAlignment="Top" Click="Button_Click" />
+        <Button Content="Show" HorizontalAlignment="Left" Margin="345,702,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_3" />
+        <Button Content="Update" HorizontalAlignment="Left" Margin="109,702,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_1" />
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="232,702,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_2" />
 
         <ListBox x:Name="listBox" Margin="446,0,0,0" Width="auto" >
         </ListBox>
+
     </Grid>
 </Window>
