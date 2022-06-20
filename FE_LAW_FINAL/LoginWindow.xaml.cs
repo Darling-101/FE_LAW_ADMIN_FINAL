@@ -36,11 +36,11 @@ namespace FE_LAW_FINAL {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Login()
         {
             _username = username.Text;
             _password = password.Password.ToString();
-            
+
 
             if (_username == "" || _password == "")
             {
@@ -73,6 +73,19 @@ namespace FE_LAW_FINAL {
             else
             {
                 MessageBox.Show("Đăng nhập không thành công");
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Login();
+        }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                Login();
             }
         }
 

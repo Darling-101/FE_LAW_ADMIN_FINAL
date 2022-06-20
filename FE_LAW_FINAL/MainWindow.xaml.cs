@@ -34,64 +34,89 @@ namespace FE_LAW_FINAL {
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int _article = Int32.Parse(article.Text);
-            string _articleContent = articleContent.Text;
-            int _clause = -1;
-            if(clause.Text != "")
+            try
             {
-                 _clause = Int32.Parse(clause.Text);
-            }
-            string _clauseContent = clauseContent.Text;
-            string _fineAbove = fineAbove.Text;
-            string _fineBelow = fineBelow.Text;
-            string _point = point.Text;
-            string _pointContent = pointContent.Text;
+                int _article = Int32.Parse(article.Text);
+                string _articleContent = articleContent.Text;
+                int _clause = -1;
+                if (clause.Text != "")
+                {
+                    _clause = Int32.Parse(clause.Text);
+                }
+                string _clauseContent = clauseContent.Text;
+                string _fineAbove = fineAbove.Text;
+                string _fineBelow = fineBelow.Text;
+                string _point = point.Text;
+                string _pointContent = pointContent.Text;
 
-            string query = string.Format("INSERT INTO Law(article, article_content, clause, clause_content, fine_above, fine_below, point, point_content) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}', '{7}')", _article, _articleContent, _clause, _clauseContent, _fineAbove, _fineBelow, _point, _pointContent);
-            SQLiteCommand cmd = new SQLiteCommand();
-            conn.Open();
-            cmd.CommandText = query;
-            cmd.Connection = conn;
-            adapter.SelectCommand = cmd;
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Them thanh cong");
+
+                string query = string.Format("INSERT INTO Law(article, article_content, clause, clause_content, fine_above, fine_below, point, point_content) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}', '{7}')", _article, _articleContent, _clause, _clauseContent, _fineAbove, _fineBelow, _point, _pointContent);
+                SQLiteCommand cmd = new SQLiteCommand();
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                adapter.SelectCommand = cmd;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Thêm thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin");
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            int _article = Int32.Parse(article.Text);
-            string _articleContent = articleContent.Text;
-            int _clause = Int32.Parse(clause.Text);
-            string _clauseContent = clauseContent.Text;
-            string _fineAbove = fineAbove.Text;
-            string _fineBelow = fineBelow.Text;
-            string query;
+            try
+            {
+                string id = ID.Text;
+                int _article = Int32.Parse(article.Text);
+                string _articleContent = articleContent.Text;
+                int _clause = Int32.Parse(clause.Text);
+                string _clauseContent = clauseContent.Text;
+                string _fineAbove = fineAbove.Text;
+                string _fineBelow = fineBelow.Text;
+                string query;
 
-            query = string.Format("UPDATE Law SET HoTen='{0}', Lop='{1}', TinhTrang='{2}' WHERE id={3}", _article, _articleContent, _clause, _clauseContent);
-            SQLiteCommand cmd = new SQLiteCommand();
-            cmd.CommandText = query;
-            conn.Open();
-            cmd.Connection = conn;
-            adapter.SelectCommand = cmd;
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Cap nhat thanh cong");
+                query = string.Format("UPDATE Law SET article='{0}', articleContent='{1}', clause='{2}', clauseContent='{3}' WHERE id={4}", _article, _articleContent, _clause, _clauseContent, ID);
+                SQLiteCommand cmd = new SQLiteCommand();
+                cmd.CommandText = query;
+                conn.Open();
+                cmd.Connection = conn;
+                adapter.SelectCommand = cmd;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Cập nhật thành công");
+            }
+            catch
+            {
+                
+                MessageBox.Show("Chức năng đang được hoàn thiện!","Lưu ý",MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            string id = ID.Text;
+            try
+            {
+                string id = ID.Text;
 
-            string query = string.Format("DELETE FROM Law WHERE id={0}", id);
-            SQLiteCommand cmd = new SQLiteCommand();
-            conn.Open();
-            cmd.CommandText = query;
-            cmd.Connection = conn;
-            adapter.SelectCommand = cmd;
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Xoa thanh cong");
+                string query = string.Format("DELETE FROM Law WHERE id={0}", id);
+                SQLiteCommand cmd = new SQLiteCommand();
+                conn.Open();
+                cmd.CommandText = query;
+                cmd.Connection = conn;
+                adapter.SelectCommand = cmd;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Chưa nhập ID","Lưu ý",MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
