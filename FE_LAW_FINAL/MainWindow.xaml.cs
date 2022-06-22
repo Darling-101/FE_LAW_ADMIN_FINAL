@@ -60,9 +60,10 @@ namespace FE_LAW_FINAL {
                 conn.Close();
                 MessageBox.Show("Thêm thành công");
             }
-            catch
+            catch(Exception)
             {
                 MessageBox.Show("Chưa nhập đủ thông tin");
+                conn.Close();
             }
             
         }
@@ -74,10 +75,16 @@ namespace FE_LAW_FINAL {
                 string id = ID.Text;
                 int _article = Int32.Parse(article.Text);
                 string _articleContent = articleContent.Text;
-                int _clause = Int32.Parse(clause.Text);
+                int _clause = -1;
+                if (clause.Text != "")
+                {
+                    _clause = Int32.Parse(clause.Text);
+                }
                 string _clauseContent = clauseContent.Text;
                 string _fineAbove = fineAbove.Text;
                 string _fineBelow = fineBelow.Text;
+                string _point = point.Text;
+                string _pointContent = pointContent.Text;s
                 string query;
 
                 query = string.Format("UPDATE Law SET article='{0}', articleContent='{1}', clause='{2}', clauseContent='{3}' WHERE id={4}", _article, _articleContent, _clause, _clauseContent, ID);
@@ -94,6 +101,7 @@ namespace FE_LAW_FINAL {
             {
                 
                 MessageBox.Show("Chức năng đang được hoàn thiện!","Lưu ý",MessageBoxButton.OK, MessageBoxImage.Warning);
+                conn.Close();
             }
         }
 
@@ -116,14 +124,16 @@ namespace FE_LAW_FINAL {
             catch
             {
                 MessageBox.Show("Chưa nhập ID","Lưu ý",MessageBoxButton.OK, MessageBoxImage.Warning);
+                conn.Close();
             }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             string query = "SELECT * FROM Law";
-            SQLiteCommand cmd = new SQLiteCommand();
             conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand();
+            
             cmd.CommandText = query;
             cmd.Connection = conn;
             adapter.SelectCommand = cmd;
